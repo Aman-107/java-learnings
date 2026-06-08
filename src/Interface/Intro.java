@@ -14,7 +14,36 @@ public interface Intro {
 
 
 
-/*    
+/*  
+
+	Interfaces don't have return types; methods inside interfaces can have return types.
+	Example : 
+	
+	interface Animal {
+    void makeSound();    // return type: void
+    int getAge();        // return type: int
+    String getName();    // return type: String
+}
+
+When a class implements the interface, it must use the same return type:
+	class Dog implements Animal {
+
+    public void makeSound() {
+        System.out.println("Woof");
+    }
+
+    public int getAge() {
+        return 5;
+    }
+
+    public String getName() {
+        return "Tommy";
+    }
+}
+
+
+
+
    Interface -> it defines the methods signatures i.e. some fixed set of rules - class 
    
     public void getData(){
@@ -37,6 +66,8 @@ public interface Intro {
     // any other requirements of code or modification in code
     }
     }
-    
+
+
+	
  */
  
