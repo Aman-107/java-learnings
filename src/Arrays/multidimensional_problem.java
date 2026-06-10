@@ -33,17 +33,20 @@ public class multidimensional_problem {
 		
 		int b[][] = {{9,5,7,1}, {9,7,2,3},{7,0,1,1}};
 		int mini =b[0][0];
-		int col = 0;
+		int col = 0,row =0;
 		
 		for (int i=0; i<b.length; i++) {
 			for(int j=0; j<b[0].length; j++) {
 				if(b[i][j] < mini) {
 					mini = b[i][j];
 					col = j;
+					row = i;
 				}
 			}
 		}
-		int col_maxi = 0;
+
+// Que -> Find minimum number and then print the maximum number of that column in which minimum number is present.		
+		int col_maxi = Integer.MIN_VALUE;
 //		for(int i=0; i<b.length; i++) {
 //			for(int j = col; j<=col; j++) {
 //				if (b[i][j] > col_maxi) {
@@ -54,7 +57,7 @@ public class multidimensional_problem {
 		// Above is also correct but we are using 2 loops hence space complexity increase instead we will use while loop
 		
 		int k =0;
-		while(k<b.length) {
+		while(k<b[0].length && k <= row) {
 			if (b[k][col] > col_maxi) {
 				col_maxi = b[k][col];
 			}
