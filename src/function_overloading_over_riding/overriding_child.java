@@ -31,6 +31,11 @@ public class overriding_child extends overriding_parent{
 		cc.brakes();
 		cc.colour();
 		cc.audiosystems(); 
+
+		// suppose we create object for parent class via child class and call the audiosystem then also it will prefer child method only.
+		// overriding_parent c1 = new overriding_child();
+		// c1.audiosystems();   //Output -> This is the audiosystems section of child class.
+		
 		// function overriding - both have method same name, same signature, same parameters but preference is given to child 
 		// class because it's a local and this feature is known as overriding in OOPs of JAVA.
 }
