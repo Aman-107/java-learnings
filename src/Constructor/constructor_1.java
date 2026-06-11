@@ -41,6 +41,7 @@ public class constructor_1 {
 		   string as parameters.
 		*/
 		constructor_1 con = new constructor_1(); 
+		con1.getData(); // this will also work since we calling via object irrespective to constructor parameter
 		con.getData();
 		// here we are calling via the class object to call the getData method values
 	}
